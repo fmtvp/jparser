@@ -4,12 +4,11 @@ import java.io.File;
 
 public class Main
 {
-    public static void main(String[] asArgs) throws Exception
-    {
+	public static void main(String[] asArgs) throws Exception
+	{
 		Javancss pJavancss = new Javancss();
-		if (asArgs.length > 1) {
-			System.out.print("{");
-		}
+		
+		System.out.print("{");
 		for(int i = 0; i < asArgs.length; ++i) {
 			final String filename = asArgs[i];
 			final File file = new File(filename);
@@ -25,10 +24,7 @@ public class Main
 				}
 			}
 		}
-		if (asArgs.length > 1) {
-			System.out.print("}");
-		}
-		System.out.println();
-        System.exit(0);
-    }
+		System.out.println("}");
+		System.exit(0);
+	}
 }
